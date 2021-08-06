@@ -80,9 +80,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DLLAssistant\DLLAssistant.csproj">
-      <Project>{c35aef96-673e-434a-aa52-198e87b36467}</Project>
-      <Name>DLLAssistant</Name>
+    <ProjectReference Include="..\DevDLLAssistantLib\DevDLLAssistantLib.csproj">
+      <Project>{5d0c01b0-1499-46ca-870f-b9d290e6bb2d}</Project>
+      <Name>DevDLLAssistantLib</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
