@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DevDLLAssistantLib
+namespace DevAssistant.Logic.Models
 {
-    public class Class1
-    {
-    }
+	public class Configuration
+	{
+		public string FileSystemWatchPath { get; set; }
+	}
 }
