@@ -45,6 +45,7 @@ namespace DevAssistant.UI
 			this.configurationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.gb_managesServices = new System.Windows.Forms.GroupBox();
+			this.cb_selectSync = new System.Windows.Forms.CheckBox();
 			this.btn_restartServices = new System.Windows.Forms.Button();
 			((System.ComponentModel.ISupportInitialize)(this.dgv_availableDLLs)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher)).BeginInit();
@@ -80,7 +81,6 @@ namespace DevAssistant.UI
 			this.btn_markAsSelected.TabIndex = 3;
 			this.btn_markAsSelected.Text = ">>";
 			this.btn_markAsSelected.UseVisualStyleBackColor = true;
-			this.btn_markAsSelected.Click += new System.EventHandler(this.btn_markAsSelected_Click);
 			// 
 			// btn_copySelectedFiles
 			// 
@@ -186,6 +186,7 @@ namespace DevAssistant.UI
 			// 
 			// gb_managesServices
 			// 
+			this.gb_managesServices.Controls.Add(this.cb_selectSync);
 			this.gb_managesServices.Controls.Add(this.btn_restartServices);
 			this.gb_managesServices.Location = new System.Drawing.Point(801, 47);
 			this.gb_managesServices.Name = "gb_managesServices";
@@ -193,6 +194,17 @@ namespace DevAssistant.UI
 			this.gb_managesServices.TabIndex = 12;
 			this.gb_managesServices.TabStop = false;
 			this.gb_managesServices.Text = "Manage Services";
+			// 
+			// cb_selectSync
+			// 
+			this.cb_selectSync.AutoSize = true;
+			this.cb_selectSync.Location = new System.Drawing.Point(152, 37);
+			this.cb_selectSync.Name = "cb_selectSync";
+			this.cb_selectSync.Size = new System.Drawing.Size(50, 17);
+			this.cb_selectSync.TabIndex = 11;
+			this.cb_selectSync.Tag = "sync";
+			this.cb_selectSync.Text = "Sync";
+			this.cb_selectSync.UseVisualStyleBackColor = true;
 			// 
 			// btn_restartServices
 			// 
@@ -202,7 +214,7 @@ namespace DevAssistant.UI
 			this.btn_restartServices.TabIndex = 10;
 			this.btn_restartServices.Text = "Restart";
 			this.btn_restartServices.UseVisualStyleBackColor = true;
-			this.btn_restartServices.Click += new System.EventHandler(this.btn_restartServices_Click);
+			this.btn_restartServices.Click += new System.EventHandler(this.RestartServicesButton_Click);
 			// 
 			// MainForm
 			// 
@@ -230,6 +242,7 @@ namespace DevAssistant.UI
 			this.menuStrip1.ResumeLayout(false);
 			this.menuStrip1.PerformLayout();
 			this.gb_managesServices.ResumeLayout(false);
+			this.gb_managesServices.PerformLayout();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -252,6 +265,7 @@ namespace DevAssistant.UI
 		private System.Windows.Forms.ToolStripMenuItem optionsToolStripMenuItem;
 		private System.Windows.Forms.GroupBox gb_managesServices;
 		private System.Windows.Forms.Button btn_restartServices;
+		private System.Windows.Forms.CheckBox cb_selectSync;
 	}
 }
 
