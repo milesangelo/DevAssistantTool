@@ -6,6 +6,8 @@ namespace DevAssistant.Logic.Services
 {
     public interface IDevAssistantService
     {
-        Task<List<MCBuildArtifact>> GetAvailableArtifacts();
+        //Task<List<MCBuildArtifact>> GetAvailableArtifacts();
+
+        void Restart();
     }
 }

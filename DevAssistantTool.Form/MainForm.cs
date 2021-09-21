@@ -10,6 +10,8 @@ namespace DevAssistant.UI
     {
         //DLLFinder dllFinder;
         DataTable table;
+
+        
         public MainForm()
         {
             InitializeComponent();
@@ -21,6 +23,9 @@ namespace DevAssistant.UI
             table.Columns.Add("Path", typeof(string));
             table.Columns.Add("Last Modified", typeof(string));
             this.dgv_availableDLLs.DataSource = table;
+
+
+            //_devAssistService = new DevAssistantService();
         }
 
         /// <summary>
@@ -63,11 +68,11 @@ namespace DevAssistant.UI
             //lb_availableFiles.EndUpdate();
         }
 
-        private void btn_markAsSelected_Click(object sender, EventArgs e)
-        {
-            // Get the selected and move them to list on right!
-        }
-
+        /// <summary>
+        /// TODO, I believe this button and click event can be removed.  The functionality should have been implemented in the Logic project.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
 		private void button1_Click(object sender, EventArgs e)
 		{
             ServiceController serviceController;
@@ -96,6 +101,13 @@ namespace DevAssistant.UI
             }
         }
 
+        /// <summary>
+        /// TODO, looks like functionality to stop the IISADMIN service?  Pretty sure I can remove it.
+        /// 
+        /// Remove this if functionality lives inside Logic project.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
 		private void button2_Click(object sender, EventArgs e)
 		{
             ServiceController serviceController = new ServiceController("IISADMIN");
@@ -105,6 +117,11 @@ namespace DevAssistant.UI
             var status = serviceController.Status;
         }
 
+        /// <summary>
+        /// Open the Options form on click and save any data passed into it.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
 		private void optionsToolStripMenuItem_Click(object sender, EventArgs e)
 		{
             OptionsForm optionsForm = new OptionsForm();
@@ -112,8 +129,7 @@ namespace DevAssistant.UI
             if (optionsForm.DialogResult == DialogResult.OK)
             {
                 fileSystemWatcher.Path = optionsForm.Configuration.FileSystemWatchPath;
-                fileSystemWatcher.IncludeSubdirectories = true;
-                
+                fileSystemWatcher.IncludeSubdirectories = true;   
             }
 
             optionsForm.Dispose();
@@ -141,8 +157,18 @@ namespace DevAssistant.UI
 
 		private void btn_markAsAvailable_Click(object sender, EventArgs e)
 		{
-            DevAssistantService service = new DevAssistantService();
-            service.SetIISAdminServiceStartupType();
+            
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+		private void btn_restartServices_Click(object sender, EventArgs e)
+		{
+            //DevAssistantService service = new DevAssistantService();
+            //service.Restart();
         }
 	}
 

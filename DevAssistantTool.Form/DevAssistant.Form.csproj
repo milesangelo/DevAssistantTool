@@ -90,7 +90,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DevDLLAssistantLib\DevAssistant.Logic.csproj">
+    <ProjectReference Include="..\DevAssistantTool.Logic\DevAssistant.Logic.csproj">
       <Project>{5d0c01b0-1499-46ca-870f-b9d290e6bb2d}</Project>
       <Name>DevAssistant.Logic</Name>
     </ProjectReference>

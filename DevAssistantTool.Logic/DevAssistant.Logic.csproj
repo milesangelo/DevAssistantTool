@@ -43,13 +43,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Services\ArtifactFileService.cs" />
-    <Compile Include="Data\DevAssistantContext.cs" />
-    <Compile Include="DLLFinder.cs" />
     <Compile Include="Models\Configuration.cs" />
     <Compile Include="Models\MCBuildArtifact.cs" />
     <Compile Include="Services\DevAssistantService.cs" />
     <Compile Include="Services\IDevAssistantService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\IISAdminService.cs" />
+    <Compile Include="Services\IService.cs" />
     <Compile Include="Services\ServiceHelper.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

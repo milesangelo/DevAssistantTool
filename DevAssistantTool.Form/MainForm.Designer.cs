@@ -38,16 +38,18 @@ namespace DevAssistant.UI
 			this.lbl_availableFiles = new System.Windows.Forms.Label();
 			this.lbl_selectedFiles = new System.Windows.Forms.Label();
 			this.dgv_availableDLLs = new System.Windows.Forms.DataGridView();
-			this.button1 = new System.Windows.Forms.Button();
 			this.button2 = new System.Windows.Forms.Button();
 			this.fileSystemWatcher = new System.IO.FileSystemWatcher();
 			this.menuStrip1 = new System.Windows.Forms.MenuStrip();
 			this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
 			this.configurationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.gb_managesServices = new System.Windows.Forms.GroupBox();
+			this.btn_restartServices = new System.Windows.Forms.Button();
 			((System.ComponentModel.ISupportInitialize)(this.dgv_availableDLLs)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher)).BeginInit();
 			this.menuStrip1.SuspendLayout();
+			this.gb_managesServices.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// lb_selectedFiles
@@ -129,16 +131,6 @@ namespace DevAssistant.UI
 			this.dgv_availableDLLs.Size = new System.Drawing.Size(344, 355);
 			this.dgv_availableDLLs.TabIndex = 8;
 			// 
-			// button1
-			// 
-			this.button1.Location = new System.Drawing.Point(362, 288);
-			this.button1.Name = "button1";
-			this.button1.Size = new System.Drawing.Size(75, 23);
-			this.button1.TabIndex = 9;
-			this.button1.Text = "button1";
-			this.button1.UseVisualStyleBackColor = true;
-			this.button1.Click += new System.EventHandler(this.button1_Click);
-			// 
 			// button2
 			// 
 			this.button2.Location = new System.Drawing.Point(362, 317);
@@ -167,7 +159,7 @@ namespace DevAssistant.UI
 			this.menuStrip1.Location = new System.Drawing.Point(0, 0);
 			this.menuStrip1.Name = "menuStrip1";
 			this.menuStrip1.Padding = new System.Windows.Forms.Padding(3, 1, 0, 1);
-			this.menuStrip1.Size = new System.Drawing.Size(776, 24);
+			this.menuStrip1.Size = new System.Drawing.Size(1114, 24);
 			this.menuStrip1.TabIndex = 11;
 			this.menuStrip1.Text = "menuStrip1";
 			// 
@@ -192,13 +184,33 @@ namespace DevAssistant.UI
 			this.optionsToolStripMenuItem.Text = "Options";
 			this.optionsToolStripMenuItem.Click += new System.EventHandler(this.optionsToolStripMenuItem_Click);
 			// 
+			// gb_managesServices
+			// 
+			this.gb_managesServices.Controls.Add(this.btn_restartServices);
+			this.gb_managesServices.Location = new System.Drawing.Point(801, 47);
+			this.gb_managesServices.Name = "gb_managesServices";
+			this.gb_managesServices.Size = new System.Drawing.Size(301, 383);
+			this.gb_managesServices.TabIndex = 12;
+			this.gb_managesServices.TabStop = false;
+			this.gb_managesServices.Text = "Manage Services";
+			// 
+			// btn_restartServices
+			// 
+			this.btn_restartServices.Location = new System.Drawing.Point(16, 37);
+			this.btn_restartServices.Name = "btn_restartServices";
+			this.btn_restartServices.Size = new System.Drawing.Size(75, 23);
+			this.btn_restartServices.TabIndex = 10;
+			this.btn_restartServices.Text = "Restart";
+			this.btn_restartServices.UseVisualStyleBackColor = true;
+			this.btn_restartServices.Click += new System.EventHandler(this.btn_restartServices_Click);
+			// 
 			// MainForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(776, 479);
+			this.ClientSize = new System.Drawing.Size(1114, 479);
+			this.Controls.Add(this.gb_managesServices);
 			this.Controls.Add(this.button2);
-			this.Controls.Add(this.button1);
 			this.Controls.Add(this.dgv_availableDLLs);
 			this.Controls.Add(this.lbl_selectedFiles);
 			this.Controls.Add(this.lbl_availableFiles);
@@ -217,6 +229,7 @@ namespace DevAssistant.UI
 			((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher)).EndInit();
 			this.menuStrip1.ResumeLayout(false);
 			this.menuStrip1.PerformLayout();
+			this.gb_managesServices.ResumeLayout(false);
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -231,13 +244,14 @@ namespace DevAssistant.UI
         private System.Windows.Forms.Label lbl_availableFiles;
         private System.Windows.Forms.Label lbl_selectedFiles;
         private System.Windows.Forms.DataGridView dgv_availableDLLs;
-		private System.Windows.Forms.Button button1;
 		private System.Windows.Forms.Button button2;
 		private System.IO.FileSystemWatcher fileSystemWatcher;
 		private System.Windows.Forms.MenuStrip menuStrip1;
 		private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
 		private System.Windows.Forms.ToolStripMenuItem configurationToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem optionsToolStripMenuItem;
+		private System.Windows.Forms.GroupBox gb_managesServices;
+		private System.Windows.Forms.Button btn_restartServices;
 	}
 }
 
