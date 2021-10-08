@@ -1,6 +1,8 @@
 ﻿using DevAssistant.Logic.Services;
 using System;
+using System.Collections.Generic;
 using System.Data;
+using System.Linq;
 using System.ServiceProcess;
 using System.Windows.Forms;
 
@@ -165,11 +167,24 @@ namespace DevAssistant.UI
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-		private void btn_restartServices_Click(object sender, EventArgs e)
+		private void RestartServicesButton_Click(object sender, EventArgs e)
 		{
-            //DevAssistantService service = new DevAssistantService();
-            //service.Restart();
+            List<string> servicesToRestart = new List<string>();
+
+            // Get all of the checkboxes that are checked
+            foreach (var checkbox in this.gb_managesServices.Controls.OfType<CheckBox>())
+            {
+                if (checkbox.Checked)
+                {
+                    System.Console.WriteLine(checkbox.Tag);
+                }
+            }
         }
+
+		private void btn_restartServices_Click_1(object sender, EventArgs e)
+		{
+
+		}
 	}
 
 	public class DLLInfo
